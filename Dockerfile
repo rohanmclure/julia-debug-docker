@@ -8,6 +8,7 @@ RUN apt-get install --no-install-recommends -y software-properties-common \
     libatomic1 \
     git \
     python \
+    perl \
     gfortran \
     make \
     zlib1g-dev \
