@@ -25,6 +25,7 @@ RUN wget -qO- "https://cmake.org/files/v3.12/cmake-3.12.1-Linux-x86_64.tar.gz" |
 # Install Julia in debug mode
 RUN git clone https://github.com/JuliaLang/julia.git /julia
 WORKDIR $JULIA_SRC
+RUN git checkout v1.0.1
 RUN make debug
 
 # Install R
