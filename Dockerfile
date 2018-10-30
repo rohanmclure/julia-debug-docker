@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-export DEBIAN_FRONTEND=noninteractive
+RUN export DEBIAN_FRONTEND=noninteractive
 
 # Get it to install basic stuff
 RUN apt-get update
