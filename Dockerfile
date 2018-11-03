@@ -29,11 +29,3 @@ WORKDIR $JULIA_SRC
 RUN git checkout v1.0.1
 RUN make debug
 
-# Install R
-RUN apt-get install --no-install-recommends -y dirmngr gpg-agent
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
-RUN apt-get update
-RUN apt-get install --no-install-recommends -y r-base
-RUN apt-get install --no-install-recommends -y libcurl4-openssl-dev libssl-dev
-
