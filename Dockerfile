@@ -29,3 +29,11 @@ WORKDIR $JULIA_SRC
 RUN git checkout v1.0.3
 RUN make debug
 
+# Include the path for Julia Binaries
+RUN export PATH=$JULIA_SRC/bin:$PATH
+
+# Install Julia packages
+RUN julia -e "using Pkg; Pkg.add(\"IJulia\"); Pkg.build(\"IJulia\")"
+
+# Jupyter setup
+EXPOSE 8888
