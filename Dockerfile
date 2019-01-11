@@ -37,3 +37,5 @@ RUN julia -e "using Pkg; Pkg.add(\"IJulia\"); Pkg.build(\"IJulia\")"
 
 # Jupyter setup
 EXPOSE 8888
+
+CMD [julia, -e, "using IJulia; notebook(detached=true)"]
